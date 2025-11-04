@@ -21,7 +21,7 @@ chmod +x server-stats.sh
 ./server-stats.sh
 ```
 
-5. Output yang muncul ketika script berhasil berjalan
+5. Contoh Output yang muncul ketika script berhasil berjalan
 ```bash
 rouf@rouf:~/script$ ./server-stats.sh
 =================================================================
