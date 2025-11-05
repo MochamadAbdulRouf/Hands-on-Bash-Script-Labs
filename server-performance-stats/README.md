@@ -1,6 +1,8 @@
 # Simple Project Bash Script 
 ## Server Performance Stats
 
+Script ini berguna untuk membuat laporan mengenai performa dari stats sistem os linux untuk mendapatkan informasi mengenai Penggunaan CPU, Penggunaan Memori, Pengunaan Disk, dll. Bisa dilihat hasil lebih lengkap di bagian bawah sendiri ada contoh output yang keluar dari hasil script.Jadi ini berguna saat ingin melihat spesifik stats dari sebuah sistem os karena tidak membutuhkan waktu lama untuk mengecek stats sistem dengan melihatnya satu persatu, dengan menggunakan script ini membuat semua stats masuk ke dalam satu laporan, Script ini bekerja di semua jenis OS LINUX.
+
 1. Copy code repository
 ```bash
 git clone https://github.com/MochamadAbdulRouf/Hands-on-Bash-Script-Labs.git
