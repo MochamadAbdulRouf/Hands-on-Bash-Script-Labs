@@ -20,7 +20,7 @@ chmod +x cluster-gke.sh
 
 ### Contoh hasil script yang telah dijalankan
 
-1. Log 1 (saat script sedang berjalan)
+1. Log 1 (saat script sedang berjalan dan cluster berhasil dibuat)
 ```bash
 student_04_e054dd34acd8@cloudshell:~ (qwiklabs-gcp-01-03f238347027)$ ./cluster-gke.sh 
 ++ gcloud compute project-info describe '--format=value(commonInstanceMetadata.items[google-compute-default-zone])'
