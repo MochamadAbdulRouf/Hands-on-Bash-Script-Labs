@@ -8,7 +8,7 @@ note: Kode script ini mengambil refrensi dari Google cloud skill boost, Script i
 curl -L -O https://raw.githubusercontent.com/MochamadAbdulRouf/Hands-on-Bash-Script-Labs/refs/heads/master/create-clusters-gke/cluster-gke.sh 
 ```
 
-2. Berikan izin eksekusi kepada file script
+2. Berikan izin eksekusi ke file script
 ```bash
 chmod +x cluster-gke.sh
 ```
@@ -49,5 +49,5 @@ Fetching cluster endpoint and auth data.
 kubeconfig entry generated for cluster-fortuneapp.
 ```
 
-2. Dokumentasi di Dashboard GKE Google Cloud
+2. Dokumentasi di Dashboard GKE Google Cloud (Cluster berhasil dibuat)
 ![ss-gke-script](./image/ss-cluster-script.png)
