@@ -13,7 +13,8 @@ then
     echo "Netdata not found. Starting Installation..."
     # Jalankan skrip install one-liner
     # Menambahkan '--non-interactive' untuk menghindari prompt 
-    bash <(curl -Ss https://my-netdata.io/kickstart.sh) --non-interactive
+    # (Fix untuk instalasi otomatis menambahkan argumen '-SsL')
+    bash <(curl -SsL https://my-netdata.io/kickstart.sh) --non-interactive
 else 
     echo "Netdata is already installed."
 fi 
@@ -25,6 +26,6 @@ sudo systemctl start netdata
 
 echo "___"
 echo "Setup complete! Netdata is Running!"
-echo "Access Netdata di: http://$(hostname -I / awk '{print $1'}):19999"
+echo "Access Netdata di: http://$(hostname -I | awk '{print $1'}):19999"
 
 
