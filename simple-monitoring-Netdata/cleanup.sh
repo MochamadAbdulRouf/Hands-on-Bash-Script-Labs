@@ -3,15 +3,29 @@
 
 set -e 
 
-UNINSTALLER="/usr/libexec/netdata/netdata-uninstaller.sh"
+echo "Starting Netdata cleanup..."
 
-if [ -f "$UNINSTALLER"]; then
-    echo "Running Netdata uninstaller..."
-    sudo $UNINSTALLER --force 
+# Mencari lokasi uninstaller yang valid
+if [ -f "/usr/libexec/netdata/netdata-uninstaller.sh" ]; then
+    UNINSTALLER="/usr/libexec/netdata/netdata-uninstaller.sh"
+elif [ -f "/opt/netdata/usr/libexec/netdata/netdata-uninstaller.sh" ]; then
+    UNINSTALLER="/opt/netdata/usr/libexec/netdata/netdata-uninstaller.sh"
 else
-    echo "Netdata uninstaller not found at $UNINSTALLER"
-    echo "Perhaps Netdata is not installed or path different."
-fi 
+    UNINSTALLER=""
+fi
+
+# Eksekusi Uninstaller jika ditemukan
+if [ -n "$UNINSTALLER" ] && [ -f "$UNINSTALLER" ]; then
+    echo "Found Netdata uninstaller at: $UNINSTALLER"
+    echo "Running Netdata uninstaller..."
+    
+    # Menambahkan --yes --force untuk otomatisasi penuh tanpa prompt
+    sudo "$UNINSTALLER" --yes --force
+else
+    echo "Error: Netdata uninstaller script not found!"
+    echo "Mungkin Netdata sudah terhapus atau lokasi instalasi berbeda."
+    echo "Coba cari manual dengan: find / -name netdata-uninstaller.sh"
+fi
 
 # Hapus stress jika di install
 if command -v stress &> /dev/null
