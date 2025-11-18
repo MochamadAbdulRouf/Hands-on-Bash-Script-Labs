@@ -1,5 +1,5 @@
 # Simple Monitoring Netdata
-This project implement Monitoring Netdata, Understanding about Observability, Lifecyle management, Validation & Testing, and Troubeshooting & Debugging
+This project implements Netdata Monitoring, understanding of Observability, lifecycle management, validation and testing, as well as troubleshooting and debugging.
 
 ## How to run this project?
 
