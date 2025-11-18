@@ -1,5 +1,7 @@
 # Simple Monitoring Netdata
 This project implements Netdata Monitoring, understanding of Observability, lifecycle management, validation and testing, as well as troubleshooting and debugging.
+![doc-netdata](./image/netdata.png)
+
 
 ## How to run this project?
 
