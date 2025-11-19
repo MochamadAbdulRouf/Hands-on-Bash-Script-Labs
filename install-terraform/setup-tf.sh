@@ -1,5 +1,5 @@
 #!/bin/bash
-# install_terraform.sh
+# install terraform.sh
 # Script instalasi Terraform otomatis (HashiCorp Official Repo)
 
 set -e  # Berhenti jika ada error
